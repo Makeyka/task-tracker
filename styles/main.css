@@ -1,0 +1,21 @@
+*::selection {
+    color: #4162F6;
+}
+
+body {
+    padding: 0;
+    margin: 25px 0 0 0;
+    background-color: rgba(0,0,0,0.1);
+    font-family: 'Work Sans', sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+@media only screen and (max-width: 1200px) {
+    .container {
+        flex-direction: column;
+    }
+}

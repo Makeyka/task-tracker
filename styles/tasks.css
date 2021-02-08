@@ -1,26 +1,23 @@
-body {
-    padding: 0;
-    margin: 0;
-    background-color: rgba(0,0,0,0.1);
-    font-family: 'Work Sans', sans-serif;
-}
-
-/* ------------ task container ------------ */
+/* ------------ container ------------ */
 
 .task-container {
+    position: relative;
     padding: 10px;
-    width: 380px;
-    margin: 0 auto;
+    width: 800px;
+    height: 850px;
+    margin: 10 auto;
+    border: 1px solid black;
 }
+
 
 /* ------------ header ------------ */
 
 .header {
-    width: 380px;
+    width: 800px;
     height: 200px;
     position: relative;
-    background-image: url('./images/bg2.jpg');
-    background-size: 100% 200%;
+    background-image: url('../images/bg.jpg');
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     border-radius: 15px 15px 0 0;
 }
@@ -55,9 +52,8 @@ body {
 /* ------------ content ------------ */
 
 .content {
-    width: 380px;
-    height: 350px;
-    max-height: 350px;
+    width: 800px;
+    height: 550px;
     background-color: #FFF;
     overflow: auto;
 }
@@ -72,14 +68,23 @@ body {
 }
 
 .item {
-    width:380px;
+    width: 800px;
     height: 45px;
     min-height: 45px;
     position: relative;
-    border-bottom: 1.5px solid rgba(0,0,0,0.1);
+    border-bottom: 1.5px solid rgba(0, 0, 0, 0.1);
     list-style: none;
     padding: 0;
     margin: 0;
+    animation: fadeIn 1.5s;
+}
+
+@keyframes fadeIn {
+    from { 
+        opacity: 0;
+    } to { 
+        opacity: 1; 
+    }
 }
 
 .item i.co {
@@ -107,7 +112,7 @@ body {
     left: 50px;
     top: 8.5px;
     background-color: #FFF;
-    max-width: 285px;
+    max-width: 720px;
 }
 
 .lineThrough {
@@ -122,7 +127,7 @@ body {
     top: 10px;
 }
 
-.item i.de:hover{
+.item i.de:hover {
     color:#af0000;
     cursor: pointer;
 }
@@ -139,11 +144,12 @@ body {
 
 .add-task {
     position: relative;
-    width: 360px;
+    width: 780px;
     height: 40px;
     background-color: #FFF;
     padding: 10px;
-    border-top: 1px solid rgba(0,0,0,0.1);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 15px 15px;
 }
 
 .add-task i {
@@ -156,11 +162,11 @@ body {
     position: absolute;
     left: 50px;
     height: 35px;
-    width: 310px;
+    width: 720px;
     background-color: transparent;
     border: none;
     font-size: 20px;
-    padding-left:10px;
+    padding-left: 10px;
     font-family: 'Work Sans', sans-serif;
     color: #4162f6;
 }

@@ -84,6 +84,7 @@ function displayTask() {
             bin: false
         })
         localStorage.setItem('Task', JSON.stringify(activeTasks))
+        scrollDown()
         id++
     } else {
         input.placeholder = '( ͠ಠ ͜ʖ ͠ಠ ) Task can\'t be empty!'
@@ -93,6 +94,14 @@ function displayTask() {
     }
     input.value = ''
     console.log(activeTasks)
+}
+
+function scrollDown() {
+    let messageCount = document.getElementsByClassName('item').length -1
+    let lastMessage = document.getElementsByClassName('item')[messageCount]
+    if (lastMessage !== 'undefined' || lastMessage !== null) {
+        document.querySelector('.content').scrollTop = lastMessage.offsetTop
+    }
 }
 
 function completeTask(element) {
