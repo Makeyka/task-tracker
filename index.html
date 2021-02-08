@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="index.css">
     </head>
     <body>
-        <div class="container">
+        <div class="task-container">
             <div class="header">
                 <div class="clear">
                     <i class="fa fa-refresh"></i>
@@ -26,8 +26,14 @@
             </div>
             
             <div class="add-task">
-                <i class="fa fa-plus-circle"></i>
-                <input type="text" id="input" placeholder="Add Task">
+                <i class="fa fa-plus-circle" id="add"></i>
+                <input type="text"
+                       id="input"
+                       maxlength="24"
+                       placeholder="Add Task"
+                       onfocus=" this.placeholder = '' "
+                       onblur=" this.placeholder = 'Add Task' "
+                >
             </div>
 
         </div>

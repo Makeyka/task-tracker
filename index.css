@@ -5,9 +5,9 @@ body {
     font-family: 'Work Sans', sans-serif;
 }
 
-/* ------------ container ------------ */
+/* ------------ task container ------------ */
 
-.container {
+.task-container {
     padding: 10px;
     width: 380px;
     margin: 0 auto;
@@ -22,7 +22,6 @@ body {
     background-image: url('./images/bg2.jpg');
     background-size: 100% 200%;
     background-repeat: no-repeat;
-    border-bottom: 2px solid #070B18;
     border-radius: 15px 15px 0 0;
 }
 
@@ -130,6 +129,14 @@ body {
 
 /* ------------ add item ------------ */
 
+#add {
+    cursor: pointer;
+}
+
+#add:hover {
+    color: #01AFAE;
+}
+
 .add-task {
     position: relative;
     width: 360px;
@@ -154,6 +161,8 @@ body {
     border: none;
     font-size: 20px;
     padding-left:10px;
+    font-family: 'Work Sans', sans-serif;
+    color: #4162f6;
 }
 
 .add-task input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
