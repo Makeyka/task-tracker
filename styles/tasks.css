@@ -37,8 +37,35 @@
 
 .clear i:hover {
     cursor: pointer;
-    text-shadow: 1px 3px 5px #000;
-    transform: rotate(45deg);
+}
+
+.uncheck {
+    width : 30px;
+    height: 30px;
+    position: absolute;
+    right: 60px;
+    top: 20px;
+}
+
+.uncheck i {
+    font-size: 30px;
+    color: #FFF;
+}
+
+.uncheck i:hover {
+    cursor: pointer;
+}
+
+.rotate {
+    animation: spin linear infinite 1.5s;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    } 100% {
+        transform: rotate(360deg);
+    }
 }
 
 #date {
@@ -47,6 +74,7 @@
     left: 10px;
     color: #FFF;
     font-size: 25px;
+    text-shadow: 1px 3px 5px #000;
 }
 
 /* ------------ content ------------ */

@@ -16,6 +16,8 @@ document.getElementById('date').innerHTML = new Date().toLocaleDateString('en-US
 const add = document.getElementById('add')
 const list = document.getElementById('list')
 const input = document.getElementById('input')
+const clear = document.querySelector('.clear')
+const uncheck = document.querySelector('.uncheck')
 
 
 function addTask(task, id, done, bin) {
@@ -55,7 +57,23 @@ function loadList(arr) {
 }
 
 
-document.querySelector('.clear').addEventListener('click', () => {
+clear.addEventListener("mouseenter", () => {
+    clear.classList.add('rotate')
+})
+
+clear.addEventListener("mouseleave", () => {
+    clear.classList.remove('rotate')
+})
+
+uncheck.addEventListener("mouseenter", () => {
+    uncheck.classList.add('rotate')
+})
+
+uncheck.addEventListener("mouseleave", () => {
+    uncheck.classList.remove('rotate')
+})
+
+clear.addEventListener('click', () => {
     if (document.getElementsByClassName('item').length > 0) {
         if (window.confirm('Task list will be deleted')) {
             localStorage.clear()
@@ -64,6 +82,27 @@ document.querySelector('.clear').addEventListener('click', () => {
     }
 })
 
+uncheck.addEventListener('click', () => {
+    if (document.getElementsByClassName('item').length > 0) {
+        uncheckTasks()
+    }
+})
+
+function uncheckTasks() {
+    function getElementByXPath(xpath) {
+        return document.evaluate(
+            xpath, document, null,
+            XPathResult.FIRST_ORDERED_NODE_TYPE, null
+        ).singleNodeValue
+    }
+    let tasks = document.getElementsByClassName('fa-check-circle')
+    while (tasks.length >= 1) {
+        getElementByXPath(
+            `//li[contains(@id, "task")]//i[contains(@class, "fa-check-circle")]`
+        ).click()
+        tasks = document.getElementsByClassName('fa-check-circle')
+    }
+}
 
 add.addEventListener('click', displayTask)
 document.addEventListener('keyup', (event) => {
