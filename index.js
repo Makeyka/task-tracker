@@ -30,10 +30,10 @@ function addTask(task, id, done, bin) {
         `<li class="item" id="task-number-${id}">
             <i class="fa ${completed} co complete" id="${id}"></i>
             <p class="text ${mark}">${task}</p>
+            <i class="fa fa-edit edit"></i>
             <i class="fa fa-trash-o de delete" id="${id}"></i>
         </li>
         `
-
     list.insertAdjacentHTML('beforeend', item)
 }
 

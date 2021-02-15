@@ -60,14 +60,6 @@
     animation: spin linear infinite 1.5s;
 }
 
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    } 100% {
-        transform: rotate(360deg);
-    }
-}
-
 #date {
     position: absolute;
     bottom: 10px;
@@ -107,14 +99,6 @@
     animation: fadeIn 1.5s;
 }
 
-@keyframes fadeIn {
-    from { 
-        opacity: 0;
-    } to { 
-        opacity: 1; 
-    }
-}
-
 .item i.co {
     position: absolute;
     font-size: 25px;
@@ -131,16 +115,30 @@
     color:#6eb200;
 }
 
-.item p.text {
-    display: inline-block;
-    position: relative;
-    padding: 0;
+.editor {
+    top: 5px;
+    left: 40px;
     margin: 0;
+    width: 700px;
+    padding: 5px;
     font-size: 20px;
+    position: relative;
+    display: inline-block;
+    background-color: #FFF;
+    border-radius: 5px;
+    border: none;
+}
+
+.item p.text {
+    margin: 0;
+    padding: 0;
     left: 50px;
     top: 8.5px;
-    background-color: #FFF;
+    font-size: 20px;
     max-width: 720px;
+    position: relative;
+    display: inline-block;
+    background-color: #FFF;
 }
 
 .lineThrough {
@@ -148,16 +146,28 @@
     color : #ccc;
 }
 
-.item i.de {
-    position: absolute;
+.edit {
+    top: 11.5px;
+    left: 730px;
     font-size: 25px;
-    right: 15px;
+    position: absolute;
+}
+
+.edit:hover {
+    cursor: pointer;
+    color: #01AFAE;
+}
+
+.item i.de {
     top: 10px;
+    right: 15px;
+    font-size: 25px;
+    position: absolute;
 }
 
 .item i.de:hover {
-    color:#af0000;
     cursor: pointer;
+    color:#AF0000;
 }
 
 /* ------------ add item ------------ */
@@ -221,4 +231,24 @@
     font-family: 'Work Sans', sans-serif;
     color: #4162f6;
     font-size: 20px;
+}
+
+@keyframes colorIn {
+    
+}
+
+@keyframes fadeIn {
+    from { 
+        opacity: 0;
+    } to { 
+        opacity: 1; 
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    } 100% {
+        transform: rotate(360deg);
+    }
 }
