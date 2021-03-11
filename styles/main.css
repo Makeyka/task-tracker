@@ -4,6 +4,8 @@
 
 body {
     padding: 0;
+    max-width: 100%;
+    overflow-x: hidden;
     margin: 25px 0 0 0;
     background-color: rgba(0,0,0,0.1);
     font-family: 'Work Sans', sans-serif;
@@ -14,8 +16,48 @@ body {
     flex-direction: row;
 }
 
-@media only screen and (max-width: 1200px) {
+.task-container {
+    position: relative;
+    left: 350px;
+    padding: 10px;
+    width: 800px;
+    height: 850px;
+}
+
+.stock-container {
+    position: relative;
+    left: 350px;
+    padding: 10px;
+    width: 800px;
+    height: 850px;
+}
+
+@media only screen and (max-width: 1700px) {
+    .task-container {
+        left: 200px;
+    }
+    .stock-container {
+        left: 200px;
+    }
+}
+
+@media only screen and (max-width: 1500px) {
     .container {
         flex-direction: column;
+    }
+    .task-container {
+        left: 350px;
+    }
+    .stock-container {
+        left: 550px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .task-container {
+        left: 200px;
+    }
+    .stock-container {
+        left: 400px;
     }
 }
