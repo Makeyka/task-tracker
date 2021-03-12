@@ -49,7 +49,7 @@ body {
         left: 350px;
     }
     .stock-container {
-        left: 550px;
+        display: none;
     }
 }
 
@@ -57,7 +57,16 @@ body {
     .task-container {
         left: 200px;
     }
-    .stock-container {
-        left: 400px;
+}
+
+@media only screen and (max-width: 1050px) {
+    .task-container {
+        left: 100px;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .task-container {
+        left: 50px;
     }
 }

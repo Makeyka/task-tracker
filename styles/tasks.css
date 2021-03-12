@@ -240,3 +240,48 @@
         transform: rotate(360deg);
     }
 }
+
+@media only screen and (max-width: 1050px) {
+    .header, .content, .item {
+        width: 800px;
+    }
+    .add-task {
+        width: 780px;
+    }
+    .add-task input {
+        width: 720px;
+    }
+    .edit {
+        left: 730px;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .header, .content, .item {
+        width: 500px;
+    }
+    .add-task {
+        width: 480px;
+    }
+    .add-task input {
+        width: 420px;
+    }
+    .edit {
+        left: 430px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .header, .content, .item {
+        width: 500px;
+    }
+    .add-task {
+        width: 480px;
+    }
+    .add-task input {
+        width: 420px;
+    }
+    .edit {
+        left: 430px;
+    }
+}
